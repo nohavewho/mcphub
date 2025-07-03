@@ -36,7 +36,8 @@ RUN if [ "$INSTALL_EXT" = "true" ]; then \
   fi; \
   fi
 
-RUN uv tool install mcp-server-fetch
+RUN uv tool install mcp-server-fetch && \
+    pip install meta-ads-mcp
 
 WORKDIR /app
 
